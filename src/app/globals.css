@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta oficial do manual de marca */
+  --color-navy: #07223b;
+  --color-navy-deep: #04121f;
+  --color-gold: #d9a441;
+  --color-gold-soft: #e7c580;
+  --color-sunset: #f28c28;
+  --color-cream: #f6ebd3;
+  --color-green: #1b5e3b;
+  --color-ink: #1a2433;
+
+  --font-script: var(--font-great-vibes);
+  --font-display: var(--font-cinzel);
+  --font-sans: var(--font-montserrat);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Compensa a nav fixa ao rolar para âncoras. */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Grão de filme sutil no site inteiro — textura discreta, ar de impresso/premium. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Foco visível para navegação por teclado (a11y). */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Respeita quem pediu menos movimento: mata animações contínuas/decorativas. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reveal on scroll — animação discreta pedida no brief */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Abertura do hero — reveal suave na entrada da página. */
+  .hero-enter {
+    animation: heroIn 1s ease-out both;
+  }
+  @keyframes heroIn {
+    from {
+      transform: translateY(18px) scale(0.98);
+    }
+    to {
+      transform: none;
+    }
+  }
+}
