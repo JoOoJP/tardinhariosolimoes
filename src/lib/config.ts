@@ -18,9 +18,9 @@ export const event = {
   tagline: "Samba · Feijoada · Fraternidade",
   motto: "Encontro da Família Maçônica Amazonense",
   slogan: "Juntos somos Rio Solimões",
-  date: "07 de Novembro de 2026",
-  dateShort: "07/11/2026",
-  dateISO: "2026-11-07T12:00:00-04:00", // Manaus (AM) = UTC-4
+  date: "14 de Novembro de 2026",
+  dateShort: "14/11/2026",
+  dateISO: "2026-11-14T12:00:00-04:00", // Manaus (AM) = UTC-4
   time: "12h às 19h",
   venue: "Clube Sírio Libanês, Manaus (AM)",
   venueName: "Clube Sírio Libanês",

@@ -12,7 +12,7 @@ export function About() {
 
         <Reveal className="mt-10 space-y-6 text-center text-lg leading-relaxed text-navy/80" delay={100}>
           <p>
-            No dia 7 de novembro, a família{" "}
+            No dia 14 de novembro, a família{" "}
             <strong className="font-semibold text-navy">{event.lodgeShort}</strong> abre as portas
             do Clube Sírio Libanês para uma tarde de muita música, feijoada e boa prosa. Irmãos,
             familiares, amigos e convidados em um ambiente preparado para celebrar a fraternidade.

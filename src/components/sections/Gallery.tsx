@@ -4,7 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { event } from "@/lib/config";
 
 // Evento ainda não aconteceu — sem fotos reais. Prévia honesta com a
-// atmosfera do encontro; substituir por fotos após a 1ª edição (07/11/2026).
+// atmosfera do encontro; substituir por fotos após a 1ª edição (14/11/2026).
 const tiles: { label: string; span: string; tone: string }[] = [
   { label: "Abraços", span: "sm:col-span-2 sm:row-span-2", tone: "from-navy-deep via-navy to-[#3a1e12]" },
   { label: "Música", span: "", tone: "from-navy to-sunset/40" },

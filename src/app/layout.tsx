@@ -24,7 +24,7 @@ const greatVibes = Great_Vibes({
   display: "swap",
 });
 
-const description = `Dia 7 de novembro, a partir das 12h, no Clube Sírio Libanês, em Manaus. Uma tarde de samba, feijoada e reencontro da família maçônica amazonense. Garanta seu ingresso.`;
+const description = `Dia 14 de novembro, a partir das 12h, no Clube Sírio Libanês, em Manaus. Uma tarde de samba, feijoada e reencontro da família maçônica amazonense. Garanta seu ingresso.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

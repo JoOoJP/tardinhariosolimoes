@@ -28,7 +28,7 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: "Quando e onde vai ser?",
     answer:
-      "No dia 7 de novembro de 2026, a partir das 12h, no Clube Sírio Libanês, em Manaus (AM).",
+      "No dia 14 de novembro de 2026, a partir das 12h, no Clube Sírio Libanês, em Manaus (AM).",
   },
   {
     question: "Como compro meu ingresso?",
