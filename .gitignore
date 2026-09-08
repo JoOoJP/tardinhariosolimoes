@@ -43,3 +43,11 @@ next-env.d.ts
 
 # Arquivos-fonte de marketing (zips do Drive) — não versionar
 *.zip
+
+# Pastas-fonte vindas do Drive (logos, artes, briefs) — o que entra no site vive em /public
+/ATRAÇÕES
+/Apresentações
+/Arte do Evento
+/LANDING PAGE
+/LOGO PATROCINADORES
+/PROJETO
