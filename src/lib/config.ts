@@ -31,12 +31,32 @@ export const event = {
   ticketPriceShort: "R$ 150",
   ticketIncludes: ["Camisa oficial", "Caneca exclusiva", "Feijoada", "Apresentações musicais"],
   ticketsForSale: 150,
-  // `band: null` = nome ainda não confirmado (a UI mostra "em breve").
+  // Line-up confirmado — logos em /public/attractions, na ordem em que sobem ao palco.
   attractions: [
-    { name: "Banda de Pagode", band: null },
-    { name: "Banda de Forró", band: null },
-    { name: "DJ", band: null },
-    { name: "Bateria da Escola de Samba Aparecida", band: null },
+    {
+      name: "Pagode dos Amigos",
+      tag: "Pagode",
+      note: "Samba e pagode de raiz para abrir a tarde",
+      logo: "/attractions/pagode-dos-amigos.png",
+    },
+    {
+      name: "Udi Oliveira",
+      tag: "Show ao vivo",
+      note: "Voz e banda pra segurar a tarde no ritmo",
+      logo: "/attractions/udi-oliveira.png",
+    },
+    {
+      name: "Grupo Ekoá",
+      tag: "Boi-Bumbá",
+      note: "Garantido e Caprichoso na mesma toada, com a cor do Amazonas",
+      logo: "/attractions/grupo-ekoa.webp",
+    },
+    {
+      name: "Bateria Universidade do Ritmo",
+      tag: "Escola de Samba Aparecida",
+      note: "O grande final em ritmo de escola de samba",
+      logo: "/attractions/universidade-do-ritmo.webp",
+    },
   ],
 } as const;
 

@@ -11,7 +11,7 @@ import {
 // "A EXPERIÊNCIA" — cards do brief.
 export const experiences: { title: string; description: string; icon: LucideIcon }[] = [
   { title: "Feijoada", description: "Feijoada completa, no capricho, com aquela cerveja bem gelada pra acompanhar.", icon: UtensilsCrossed },
-  { title: "Música ao vivo", description: "Banda de pagode, banda de forró, DJ e a bateria da Escola de Samba Aparecida. O ritmo da confraternização.", icon: Music },
+  { title: "Música ao vivo", description: "Pagode dos Amigos, Udi Oliveira, o boi-bumbá do Grupo Ekoá e a bateria da Escola de Samba Aparecida. O ritmo da confraternização.", icon: Music },
   { title: "Lugar de família", description: "Um evento para reunir a família e celebrar bons momentos.", icon: Users },
   { title: "Reencontros", description: "Aquele abraço no Irmão que você não via faz tempo. É disso que a tarde é feita.", icon: Handshake },
   { title: "Camisa e caneca", description: "As duas são suas e já vêm no ingresso. Você leva a Tardinha pra casa.", icon: Gift },
