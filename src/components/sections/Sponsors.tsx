@@ -10,11 +10,17 @@ import { contact } from "@/lib/config";
 
 type Filter = "todos" | SponsorTier;
 
+// Versão recortada/clara de logos que vieram com margem sobrando ou fundo escuro —
+// todas as superfícies de patrocinador são brancas, então vale pra tile e pra card.
 const lightLogoVersions: Record<string, string> = {
   "/sponsors/j-cruz.png": "/sponsors/j-cruz-light.png",
   "/sponsors/mmi.png": "/sponsors/mmi-light.png",
   "/sponsors/concretize.png": "/sponsors/concretize-light.png",
 };
+
+function logoFor(sponsor: Sponsor) {
+  return lightLogoVersions[sponsor.logo] ?? sponsor.logo;
+}
 
 // Tile de logo uniforme — mesmo fundo branco e mesma proporção pra todos,
 // unificando logos de fundos/tamanhos diferentes.
@@ -37,7 +43,7 @@ function LogoTile({
       className={`flex items-center justify-center rounded-2xl bg-white ring-1 ring-navy/10 transition-all hover:-translate-y-1 hover:ring-gold/40 ${logoBox} ${className}`}
     >
       <Image
-        src={lightLogoVersions[sponsor.logo] ?? sponsor.logo}
+        src={logoFor(sponsor)}
         alt={sponsor.name}
         width={260}
         height={160}
@@ -121,7 +127,7 @@ function DiamanteFeature({ list }: { list: Sponsor[] }) {
             >
               <div className="flex h-36 w-full items-center justify-center">
                 <Image
-                  src={s.logo}
+                  src={logoFor(s)}
                   alt={s.name}
                   width={340}
                   height={220}
