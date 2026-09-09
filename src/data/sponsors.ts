@@ -17,6 +17,7 @@ export const sponsors: Sponsor[] = [
   { name: "NeoPower", tier: "diamante", logo: "/sponsors/neopower.png", url: "#" },
   { name: "Odonto Vitta", tier: "diamante", logo: "/sponsors/odonto-vitta.png", url: "#" },
   { name: "Concretize", tier: "diamante", logo: "/sponsors/concretize.png", url: "#" },
+  { name: "Mendes Silva Advogados", tier: "diamante", logo: "/sponsors/mendes-silva.png", url: "https://www.instagram.com/mendessilvaadv" },
   { name: "Dr. Túlio Maia", tier: "ouro", logo: "/sponsors/dr-tulio-maia.png", url: "#" },
   { name: "J Cruz Laboratório Dental", tier: "ouro", logo: "/sponsors/j-cruz.png", url: "#" },
   { name: "Instituto Arawá", tier: "ouro", logo: "/sponsors/instituto-arawa.png", url: "https://www.instagram.com/institutoarawa" },
