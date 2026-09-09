@@ -66,13 +66,13 @@ export function SiteFooter() {
             © 2026 GBLS {event.lodgeShort} · {event.name}
           </p>
           <a
-            href="https://wa.me/5541991014546?text=Ol%C3%A1%2C%20Jo%C3%A3o!%20Vi%20que%20voc%C3%AA%20desenvolveu%20o%20site%20da%20Tardinha%20Rio%20Solim%C3%B5es."
+            href="https://wa.me/5541991014546?text=Ol%C3%A1%2C%20VIA!%20Vi%20que%20voc%C3%AAs%20desenvolveram%20o%20site%20da%20Tardinha%20Rio%20Solim%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-cream/45 transition-colors hover:text-gold focus-visible:text-gold"
-            aria-label="Desenvolvido por João Pombo, entrar em contato pelo WhatsApp"
+            aria-label="Desenvolvido pela VIA, entrar em contato pelo WhatsApp"
           >
-            Desenvolvido por João Pombo ↗
+            Desenvolvido pela VIA ↗
           </a>
         </div>
       </div>
