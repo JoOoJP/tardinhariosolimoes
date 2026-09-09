@@ -96,21 +96,24 @@ function SponsorOpening({
   );
 }
 
-// DIAMANTE em holofote: rótulo nobre + logo grande.
-function DiamanteFeature({ list }: { list: Sponsor[] }) {
+// Cotas em holofote (Diamante/Ouro): rótulo nobre + logo grande.
+function FeatureTier({ tier }: { tier: SponsorTier }) {
+  const meta = tierMeta[tier];
+  const list = sponsors.filter((s) => s.tier === tier);
+
   if (list.length === 0) {
     return (
-      <Reveal id="cota-diamante" className="mx-auto mt-10 max-w-xl scroll-mt-24 rounded-3xl border border-dashed border-gold/40 bg-white/50 px-8 py-12 text-center">
-        <TierHeader tier="diamante" />
-        <p className="mt-3 text-sm text-navy/60">Cotas Diamante abertas. Seja a marca no topo.</p>
+      <Reveal id={`cota-${tier}`} className="mx-auto mt-14 max-w-xl scroll-mt-24 rounded-3xl border border-dashed border-gold/40 bg-white/50 px-8 py-12 text-center">
+        <TierHeader tier={tier} />
+        <p className="mt-3 text-sm text-navy/60">Cotas {meta.label} abertas. Seja a marca no topo.</p>
       </Reveal>
     );
   }
 
   return (
-    <Reveal id="cota-diamante" className="mt-10 scroll-mt-24">
+    <Reveal id={`cota-${tier}`} className="mt-14 scroll-mt-24">
       <div className="flex flex-col items-center">
-        <TierHeader tier="diamante" />
+        <TierHeader tier={tier} />
       </div>
 
       <div className="mt-8 flex flex-wrap justify-center gap-8">
@@ -122,7 +125,7 @@ function DiamanteFeature({ list }: { list: Sponsor[] }) {
               href={s.url}
               target={isLink ? "_blank" : undefined}
               rel="noopener noreferrer"
-              aria-label={`${s.name}, patrocinador Diamante`}
+              aria-label={`${s.name}, patrocinador ${meta.label}`}
               className="group flex w-full max-w-md flex-col items-center gap-5 rounded-3xl border border-gold/40 bg-white px-8 py-9 shadow-lg shadow-gold/10 transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex h-36 w-full items-center justify-center">
@@ -141,7 +144,7 @@ function DiamanteFeature({ list }: { list: Sponsor[] }) {
           );
         })}
         <SponsorOpening
-          tier="diamante"
+          tier={tier}
           className="min-h-64 w-full max-w-md rounded-3xl"
         />
       </div>
@@ -149,13 +152,12 @@ function DiamanteFeature({ list }: { list: Sponsor[] }) {
   );
 }
 
-// Cotas de apoio (Ouro/Prata/Bronze): mural calmo de tiles uniformes.
+// Cotas de apoio (Prata/Bronze): mural calmo de tiles uniformes.
 function SupportTier({ tier }: { tier: SponsorTier }) {
   const meta = tierMeta[tier];
   const list = sponsors.filter((s) => s.tier === tier);
   // leve degrau de tamanho por cota, mantendo tudo discreto
-  const box =
-    tier === "ouro" ? "h-28 w-52" : tier === "prata" ? "h-24 w-44" : "h-20 w-40";
+  const box = tier === "prata" ? "h-24 w-44" : "h-20 w-40";
 
   return (
     <Reveal id={`cota-${tier}`} className="mt-14 scroll-mt-24">
@@ -179,11 +181,11 @@ function SupportTier({ tier }: { tier: SponsorTier }) {
 export function Sponsors() {
   const [filter, setFilter] = useState<Filter>("todos");
 
-  const diamante = sponsors.filter((s) => s.tier === "diamante");
-  const supportTiers = tierOrder.filter((t) => t !== "diamante");
+  // Diamante e Ouro são as cotas de destaque — mesmo card grande nas duas.
+  const featuredTiers: SponsorTier[] = ["diamante", "ouro"];
+  const supportTiers = tierOrder.filter((t) => !featuredTiers.includes(t));
 
-  const showDiamante = filter === "todos" || filter === "diamante";
-  const showSupport = (t: SponsorTier) => filter === "todos" || filter === t;
+  const show = (t: SponsorTier) => filter === "todos" || filter === t;
 
   return (
     <section
@@ -220,9 +222,9 @@ export function Sponsors() {
           })}
         </div>
 
-        {showDiamante ? <DiamanteFeature list={diamante} /> : null}
+        {featuredTiers.map((t) => (show(t) ? <FeatureTier key={t} tier={t} /> : null))}
 
-        {supportTiers.map((t) => (showSupport(t) ? <SupportTier key={t} tier={t} /> : null))}
+        {supportTiers.map((t) => (show(t) ? <SupportTier key={t} tier={t} /> : null))}
 
       </div>
     </section>
