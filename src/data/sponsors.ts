@@ -12,7 +12,7 @@ export type Sponsor = {
 };
 
 export const sponsors: Sponsor[] = [
-  { name: "Art's do Sorriso", tier: "diamante", logo: "/sponsors/arts-do-sorriso.png", url: "#" },
+  { name: "Art's do Sorriso", tier: "diamante", logo: "/sponsors/arts-do-sorriso.png", url: "https://www.instagram.com/clinica.artsdosorriso" },
   { name: "Dr. Cláudio Souza", tier: "diamante", logo: "/sponsors/dr-claudio-souza.png", url: "#" },
   { name: "NeoPower", tier: "diamante", logo: "/sponsors/neopower.png", url: "#" },
   { name: "Odonto Vitta", tier: "diamante", logo: "/sponsors/odonto-vitta.png", url: "#" },
