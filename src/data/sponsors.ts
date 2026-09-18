@@ -27,6 +27,7 @@ export const sponsors: Sponsor[] = [
   { name: "Ágape Contabilidade", tier: "prata", logo: "/sponsors/agape-contab.png", url: "#" },
   { name: "DC Reis Confecções", tier: "prata", logo: "/sponsors/dc-reis.png", url: "https://www.instagram.com/dcreis_confeccoes" },
   { name: "Espetinho Costelão do Edinho", tier: "prata", logo: "/sponsors/espetinho-costelao.png", url: "#" },
+  { name: "Amazônica Produtos Regionais", tier: "prata", logo: "/sponsors/amazonica.png", url: "https://www.instagram.com/amazonicapr" },
   { name: "Ecology Ambiental", tier: "bronze", logo: "/sponsors/ecology.png", url: "https://www.instagram.com/ecologyambiental" },
   { name: "Rootec Soluções Elétricas", tier: "bronze", logo: "/sponsors/rootec.png", url: "https://www.instagram.com/rootec.eletrica" },
 ];
