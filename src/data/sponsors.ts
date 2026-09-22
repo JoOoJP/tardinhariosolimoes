@@ -34,6 +34,7 @@ export const sponsors: Sponsor[] = [
   { name: "America Languages", tier: "prata", logo: "/sponsors/america-languages.png", url: "#" },
   { name: "Ecology Ambiental", tier: "bronze", logo: "/sponsors/ecology.png", url: "https://www.instagram.com/ecologyambiental" },
   { name: "Rootec Soluções Elétricas", tier: "bronze", logo: "/sponsors/rootec.png", url: "https://www.instagram.com/rootec.eletrica" },
+  { name: "A Casa do Pensador", tier: "bronze", logo: "/sponsors/casa-do-pensador.png", url: "#" },
 ];
 
 export const tierOrder: SponsorTier[] = ["diamante", "ouro", "prata", "bronze"];
