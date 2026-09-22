@@ -30,6 +30,7 @@ export const sponsors: Sponsor[] = [
   { name: "Amazônica Produtos Regionais", tier: "prata", logo: "/sponsors/amazonica.png", url: "https://www.instagram.com/amazonicapr" },
   { name: "Suprimais", tier: "prata", logo: "/sponsors/suprimais.png", url: "https://www.instagram.com/suprimaisam" },
   { name: "H10 Serviços", tier: "prata", logo: "/sponsors/h10-servicos.png", url: "#" },
+  { name: "America Languages", tier: "prata", logo: "/sponsors/america-languages.png", url: "#" },
   { name: "Ecology Ambiental", tier: "bronze", logo: "/sponsors/ecology.png", url: "https://www.instagram.com/ecologyambiental" },
   { name: "Rootec Soluções Elétricas", tier: "bronze", logo: "/sponsors/rootec.png", url: "https://www.instagram.com/rootec.eletrica" },
 ];
