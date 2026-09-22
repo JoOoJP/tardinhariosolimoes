@@ -28,6 +28,7 @@ export const sponsors: Sponsor[] = [
   { name: "DC Reis Confecções", tier: "prata", logo: "/sponsors/dc-reis.png", url: "https://www.instagram.com/dcreis_confeccoes" },
   { name: "Espetinho Costelão do Edinho", tier: "prata", logo: "/sponsors/espetinho-costelao.png", url: "#" },
   { name: "Amazônica Produtos Regionais", tier: "prata", logo: "/sponsors/amazonica.png", url: "https://www.instagram.com/amazonicapr" },
+  { name: "Suprimais", tier: "prata", logo: "/sponsors/suprimais.png", url: "https://www.instagram.com/suprimaisam" },
   { name: "Ecology Ambiental", tier: "bronze", logo: "/sponsors/ecology.png", url: "https://www.instagram.com/ecologyambiental" },
   { name: "Rootec Soluções Elétricas", tier: "bronze", logo: "/sponsors/rootec.png", url: "https://www.instagram.com/rootec.eletrica" },
 ];
