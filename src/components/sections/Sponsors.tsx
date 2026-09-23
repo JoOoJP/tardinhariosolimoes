@@ -42,13 +42,26 @@ function LogoTile({
       aria-label={`${sponsor.name}, patrocinador ${tierMeta[sponsor.tier].label}`}
       className={`flex items-center justify-center rounded-2xl bg-white ring-1 ring-navy/10 transition-all hover:-translate-y-1 hover:ring-gold/40 ${logoBox} ${className}`}
     >
-      <Image
+      {sponsor.logo === "/sponsors/bis-licitacoes.jpeg" ? (
+        // Enquadra a marca no material original, preservando a imagem recebida.
+        <span className="relative block h-[70%] aspect-[780/500] overflow-hidden">
+          <Image
+            src={sponsor.logo}
+            alt={sponsor.name}
+            width={1254}
+            height={1254}
+            sizes="150px"
+            className="absolute max-w-none"
+            style={{ width: "160.77%", height: "auto", left: "-30.77%", top: "-7%" }}
+          />
+        </span>
+      ) : <Image
         src={logoFor(sponsor)}
         alt={sponsor.name}
         width={260}
         height={160}
         className="max-h-[70%] w-auto object-contain"
-      />
+      />}
     </a>
   );
 }

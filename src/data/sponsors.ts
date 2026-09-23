@@ -36,6 +36,7 @@ export const sponsors: Sponsor[] = [
   { name: "Ecology Ambiental", tier: "bronze", logo: "/sponsors/ecology.png", url: "https://www.instagram.com/ecologyambiental" },
   { name: "Rootec Soluções Elétricas", tier: "bronze", logo: "/sponsors/rootec.png", url: "https://www.instagram.com/rootec.eletrica" },
   { name: "A Casa do Pensador", tier: "bronze", logo: "/sponsors/casa-do-pensador.png", url: "#" },
+  { name: "BIS Licitações e Contabilidade", tier: "bronze", logo: "/sponsors/bis-licitacoes.jpeg", url: "https://www.instagram.com/bislicitacoes/" },
 ];
 
 export const tierOrder: SponsorTier[] = ["diamante", "ouro", "prata", "bronze"];
