@@ -14,7 +14,7 @@ export type Sponsor = {
 export const sponsors: Sponsor[] = [
   { name: "Art's do Sorriso", tier: "diamante", logo: "/sponsors/arts-do-sorriso.png", url: "https://www.instagram.com/clinica.artsdosorriso" },
   { name: "Dr. Cláudio Souza", tier: "diamante", logo: "/sponsors/dr-claudio-souza.png", url: "#" },
-  { name: "NeoPower", tier: "diamante", logo: "/sponsors/neopower.png", url: "#" },
+  { name: "NeoPower", tier: "diamante", logo: "/sponsors/neopower.png", url: "https://www.instagram.com/neoopower" },
   { name: "Odonto Vitta", tier: "diamante", logo: "/sponsors/odonto-vitta.png", url: "https://www.instagram.com/odontovitta" },
   { name: "Concretize", tier: "diamante", logo: "/sponsors/concretize.png", url: "#" },
   { name: "Mendes Silva Advogados", tier: "diamante", logo: "/sponsors/mendes-silva.png", url: "https://www.instagram.com/mendessilvaadv" },
