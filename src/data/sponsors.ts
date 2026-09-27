@@ -26,7 +26,7 @@ export const sponsors: Sponsor[] = [
   { name: "Ir∴ Sadiê Lopes", tier: "ouro", logo: "/sponsors/sadie-lopes.png", url: "#" },
   { name: "FC Serviços", tier: "ouro", logo: "/sponsors/fc-servicos.png", url: "https://wa.me/5592991556164" },
   { name: "AgilTI", tier: "prata", logo: "/sponsors/agilti.png", url: "https://www.instagram.com/agiltipro/" },
-  { name: "Ágape Contabilidade", tier: "prata", logo: "/sponsors/agape-contab.png", url: "#" },
+  { name: "Ágape Contabilidade", tier: "prata", logo: "/sponsors/agape-contab.png", url: "https://wa.me/5592981140864" },
   { name: "DC Reis Confecções", tier: "prata", logo: "/sponsors/dc-reis.png", url: "https://www.instagram.com/dcreis_confeccoes" },
   { name: "Espetinho Costelão do Edinho", tier: "prata", logo: "/sponsors/espetinho-costelao.png", url: "https://www.instagram.com/costelaodoedinho" },
   { name: "Amazônica Produtos Regionais", tier: "prata", logo: "/sponsors/amazonica.png", url: "https://www.instagram.com/amazonicapr" },
