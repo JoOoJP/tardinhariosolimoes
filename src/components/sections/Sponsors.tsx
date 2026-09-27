@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import { Plus } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -22,6 +22,42 @@ function logoFor(sponsor: Sponsor) {
   return lightLogoVersions[sponsor.logo] ?? sponsor.logo;
 }
 
+function hasLink(sponsor: Sponsor) {
+  return sponsor.url.startsWith("http");
+}
+
+// Patrocinador sem rede social cadastrada fica com url "#". Como link isso só
+// rolava a página pro topo, parecendo site quebrado — então o cartão vira
+// elemento estático, sem afordância de clique, e volta a ser link sozinho
+// assim que o endereço chegar em sponsors.ts.
+function SponsorShell({
+  sponsor,
+  className,
+  interactiveClassName,
+  children,
+}: {
+  sponsor: Sponsor;
+  className: string;
+  interactiveClassName: string;
+  children: ReactNode;
+}) {
+  if (!hasLink(sponsor)) {
+    return <div className={className}>{children}</div>;
+  }
+
+  return (
+    <a
+      href={sponsor.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${sponsor.name}, patrocinador ${tierMeta[sponsor.tier].label}`}
+      className={`${className} ${interactiveClassName}`}
+    >
+      {children}
+    </a>
+  );
+}
+
 // Tile de logo uniforme — mesmo fundo branco e mesma proporção pra todos,
 // unificando logos de fundos/tamanhos diferentes.
 function LogoTile({
@@ -33,14 +69,11 @@ function LogoTile({
   logoBox: string;
   className?: string;
 }) {
-  const isLink = sponsor.url.startsWith("http");
   return (
-    <a
-      href={sponsor.url}
-      target={isLink ? "_blank" : undefined}
-      rel="noopener noreferrer"
-      aria-label={`${sponsor.name}, patrocinador ${tierMeta[sponsor.tier].label}`}
-      className={`flex items-center justify-center rounded-2xl bg-white ring-1 ring-navy/10 transition-all hover:-translate-y-1 hover:ring-gold/40 ${logoBox} ${className}`}
+    <SponsorShell
+      sponsor={sponsor}
+      className={`flex items-center justify-center rounded-2xl bg-white ring-1 ring-navy/10 ${logoBox} ${className}`}
+      interactiveClassName="transition-all hover:-translate-y-1 hover:ring-gold/40"
     >
       {sponsor.logo === "/sponsors/bis-licitacoes.jpeg" ? (
         // Enquadra a marca no material original, preservando a imagem recebida.
@@ -62,7 +95,7 @@ function LogoTile({
         height={160}
         className="max-h-[70%] w-auto object-contain"
       />}
-    </a>
+    </SponsorShell>
   );
 }
 
@@ -131,15 +164,12 @@ function FeatureTier({ tier }: { tier: SponsorTier }) {
 
       <div className="mt-8 flex flex-wrap justify-center gap-8">
         {list.map((s) => {
-          const isLink = s.url.startsWith("http");
           return (
-            <a
+            <SponsorShell
               key={s.name}
-              href={s.url}
-              target={isLink ? "_blank" : undefined}
-              rel="noopener noreferrer"
-              aria-label={`${s.name}, patrocinador ${meta.label}`}
-              className="group flex w-full max-w-md flex-col items-center gap-5 rounded-3xl border border-gold/40 bg-white px-8 py-9 shadow-lg shadow-gold/10 transition-all hover:-translate-y-1 hover:shadow-xl"
+              sponsor={s}
+              className="group flex w-full max-w-md flex-col items-center gap-5 rounded-3xl border border-gold/40 bg-white px-8 py-9 shadow-lg shadow-gold/10"
+              interactiveClassName="transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex h-36 w-full items-center justify-center">
                 <Image
@@ -153,7 +183,7 @@ function FeatureTier({ tier }: { tier: SponsorTier }) {
               <p className="font-display text-lg font-semibold uppercase tracking-wide text-navy">
                 {s.name}
               </p>
-            </a>
+            </SponsorShell>
           );
         })}
         <SponsorOpening
