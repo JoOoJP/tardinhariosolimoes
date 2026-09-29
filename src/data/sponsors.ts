@@ -34,6 +34,7 @@ export const sponsors: Sponsor[] = [
   { name: "H10 Serviços", tier: "prata", logo: "/sponsors/h10-servicos.png", url: "#" },
   { name: "America Languages", tier: "prata", logo: "/sponsors/america-languages.png", url: "https://www.instagram.com/americalanguagesmanaus" },
   { name: "Lojas Famy", tier: "prata", logo: "/sponsors/lojas-famy.png", url: "https://www.instagram.com/lojasfamyoficial" },
+  { name: "Instituto Sonhar", tier: "prata", logo: "/sponsors/instituto-sonhar.png", url: "https://www.instagram.com/instituto_sonhar" },
   { name: "Ecology Ambiental", tier: "bronze", logo: "/sponsors/ecology.png", url: "https://www.instagram.com/ecologyambiental" },
   { name: "Rootec Soluções Elétricas", tier: "bronze", logo: "/sponsors/rootec.png", url: "https://www.instagram.com/rootec.eletrica" },
   { name: "A Casa do Pensador", tier: "bronze", logo: "/sponsors/casa-do-pensador.png", url: "https://www.instagram.com/casadopensador_" },
