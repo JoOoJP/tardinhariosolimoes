@@ -18,6 +18,7 @@ export const sponsors: Sponsor[] = [
   { name: "Odonto Vitta", tier: "diamante", logo: "/sponsors/odonto-vitta.png", url: "https://www.instagram.com/odontovitta" },
   { name: "Concretize", tier: "diamante", logo: "/sponsors/concretize.png", url: "https://www.instagram.com/concretize_construcoes_" },
   { name: "Mendes Silva Advogados", tier: "diamante", logo: "/sponsors/mendes-silva.png", url: "https://www.instagram.com/mendessilvaadv" },
+  { name: "MediSol", tier: "diamante", logo: "/sponsors/medisol.png", url: "https://www.instagram.com/medisol.sst" },
   { name: "Dr. Túlio Maia", tier: "ouro", logo: "/sponsors/dr-tulio-maia.png", url: "https://www.instagram.com/consultorio_tuliomaia" },
   { name: "J Cruz Laboratório Dental", tier: "ouro", logo: "/sponsors/j-cruz.png", url: "#" },
   { name: "Instituto Arawá", tier: "ouro", logo: "/sponsors/instituto-arawa.png", url: "https://www.instagram.com/institutoarawa" },
