@@ -2,11 +2,9 @@
 
 import { useState, type ReactNode } from "react";
 import Image from "next/image";
-import { Plus } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { sponsors, tierOrder, tierMeta, type SponsorTier, type Sponsor } from "@/data/sponsors";
-import { contact } from "@/lib/config";
 
 type Filter = "todos" | SponsorTier;
 
@@ -110,45 +108,6 @@ function TierHeader({ tier }: { tier: SponsorTier }) {
   );
 }
 
-function SponsorOpening({
-  tier,
-  className,
-}: {
-  tier: SponsorTier;
-  className: string;
-}) {
-  const meta = tierMeta[tier];
-  const occupied = sponsors.filter((s) => s.tier === tier).length;
-  const available = Math.max(meta.slots - occupied, 0);
-
-  // Cota cheia sai da seção: a fileira de logos completa já mostra que
-  // esgotou, sem precisar de card anunciando. Volta a ser convite sozinho
-  // se uma vaga reabrir.
-  if (available === 0) {
-    return null;
-  }
-
-  return (
-    <a
-      href={contact.whatsappOrg}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`group flex flex-col items-center justify-center rounded-2xl border border-dashed border-gold/60 bg-transparent text-center transition-colors hover:border-gold hover:bg-white/60 ${className}`}
-      aria-label={`Falar no WhatsApp sobre uma das ${available} vagas disponíveis na cota ${meta.label}`}
-    >
-      <span className="flex size-10 items-center justify-center rounded-full border border-gold/60 text-gold transition-colors group-hover:bg-gold group-hover:text-navy">
-        <Plus className="size-5" aria-hidden />
-      </span>
-      <p className="mt-3 font-display text-sm font-semibold uppercase tracking-wide text-navy">
-        Seja patrocinador
-      </p>
-      <p className="mt-1 text-xs text-navy/55">
-        {available}/{meta.slots} vagas disponíveis
-      </p>
-    </a>
-  );
-}
-
 // Cotas em holofote (Diamante/Ouro): rótulo nobre + logo grande.
 function FeatureTier({ tier }: { tier: SponsorTier }) {
   const meta = tierMeta[tier];
@@ -193,10 +152,6 @@ function FeatureTier({ tier }: { tier: SponsorTier }) {
             </SponsorShell>
           );
         })}
-        <SponsorOpening
-          tier={tier}
-          className="min-h-64 w-full max-w-md rounded-3xl"
-        />
       </div>
     </Reveal>
   );
@@ -219,7 +174,6 @@ function SupportTier({ tier }: { tier: SponsorTier }) {
           {list.map((s) => (
             <LogoTile key={s.name} sponsor={s} logoBox={box} />
           ))}
-          <SponsorOpening tier={tier} className="h-28 w-52" />
         </div>
       ) : (
         <p className="mt-4 text-center text-sm text-navy/60">Cotas {meta.label} abertas.</p>

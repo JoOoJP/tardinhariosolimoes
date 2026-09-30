@@ -46,7 +46,8 @@ export const sponsors: Sponsor[] = [
 export const tierOrder: SponsorTier[] = ["diamante", "ouro", "prata", "bronze"];
 
 // Metadados por cota. `slots` = capacidade vendida/planejada de cada cota
-// (fonte: organização, jul/2026) — a UI só mostra logos confirmados.
+// (fonte: organização, jul/2026). Mantido como registro: com a captação
+// encerrada, a seção não exibe mais contagem de vagas nem convite.
 // `emoji` sinaliza a cota no cabeçalho da seção, no mesmo estilo do Diamante.
 export const tierMeta: Record<
   SponsorTier,
