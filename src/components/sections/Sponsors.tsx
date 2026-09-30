@@ -20,6 +20,11 @@ function logoFor(sponsor: Sponsor) {
   return lightLogoVersions[sponsor.logo] ?? sponsor.logo;
 }
 
+// Marcas que já trazem respiro no próprio desenho — selo redondo com margem
+// interna, por exemplo. Nelas os 70% padrão sobram folga dos dois lados e o
+// tile fica vazio, então ocupam a altura inteira.
+const fullHeightLogos = new Set(["/sponsors/instituto-sonhar.png"]);
+
 function hasLink(sponsor: Sponsor) {
   return sponsor.url.startsWith("http");
 }
@@ -91,7 +96,9 @@ function LogoTile({
         alt={sponsor.name}
         width={260}
         height={160}
-        className="max-h-[70%] w-auto object-contain"
+        className={`w-auto object-contain ${
+          fullHeightLogos.has(sponsor.logo) ? "max-h-full" : "max-h-[70%]"
+        }`}
       />}
     </SponsorShell>
   );
