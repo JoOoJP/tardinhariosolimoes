@@ -26,6 +26,7 @@ export const sponsors: Sponsor[] = [
   { name: "MMI Soluções e Serviços", tier: "ouro", logo: "/sponsors/mmi.png", url: "https://www.instagram.com/mmisolucoeseservicos" },
   { name: "Ir∴ Sadiê Lopes", tier: "ouro", logo: "/sponsors/sadie-lopes.png", url: "#" },
   { name: "FC Serviços", tier: "ouro", logo: "/sponsors/fc-servicos.png", url: "https://wa.me/5592991556164" },
+  { name: "Sóstenes Adiel Advocacia", tier: "ouro", logo: "/sponsors/sostenes-adiel.png", url: "https://wa.me/5592991426341" },
   { name: "AgilTI", tier: "prata", logo: "/sponsors/agilti.png", url: "https://www.instagram.com/agiltipro/" },
   { name: "Ágape Contabilidade", tier: "prata", logo: "/sponsors/agape-contab.png", url: "https://wa.me/5592981140864" },
   { name: "DC Reis Confecções", tier: "prata", logo: "/sponsors/dc-reis.png", url: "https://www.instagram.com/dcreis_confeccoes" },
