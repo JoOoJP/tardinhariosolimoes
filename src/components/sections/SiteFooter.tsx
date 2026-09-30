@@ -3,7 +3,7 @@ import { Phone, Camera, Mail, MapPin } from "lucide-react";
 import { event, contact } from "@/lib/config";
 
 const channels = [
-  { icon: Phone, label: "WhatsApp", href: contact.whatsappOrg },
+  { icon: Phone, label: "WhatsApp", href: contact.whatsappTickets },
   { icon: Camera, label: contact.instagramHandle, href: contact.instagram },
   { icon: Mail, label: contact.email, href: `mailto:${contact.email}` },
   { icon: MapPin, label: event.venue, href: undefined },
