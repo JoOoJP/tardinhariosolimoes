@@ -2,7 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 import Image from "next/image";
-import { Check, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { sponsors, tierOrder, tierMeta, type SponsorTier, type Sponsor } from "@/data/sponsors";
@@ -121,25 +121,11 @@ function SponsorOpening({
   const occupied = sponsors.filter((s) => s.tier === tier).length;
   const available = Math.max(meta.slots - occupied, 0);
 
-  // Cota cheia não convida pra "0 vagas": vira selo de esgotado. Além de
-  // corrigir o texto, joga a favor — mostra cota disputada a quem avalia
-  // patrocinar. Volta a ser convite sozinho se uma vaga reabrir.
+  // Cota cheia sai da seção: a fileira de logos completa já mostra que
+  // esgotou, sem precisar de card anunciando. Volta a ser convite sozinho
+  // se uma vaga reabrir.
   if (available === 0) {
-    return (
-      <div
-        className={`flex flex-col items-center justify-center rounded-2xl border border-navy/15 bg-white/50 text-center ${className}`}
-      >
-        <span className="flex size-10 items-center justify-center rounded-full border border-navy/20 text-navy/60">
-          <Check className="size-5" aria-hidden />
-        </span>
-        <p className="mt-3 font-display text-sm font-semibold uppercase tracking-wide text-navy">
-          Cota esgotada
-        </p>
-        <p className="mt-1 text-xs text-navy/55">
-          {meta.slots}/{meta.slots} vagas preenchidas
-        </p>
-      </div>
-    );
+    return null;
   }
 
   return (
