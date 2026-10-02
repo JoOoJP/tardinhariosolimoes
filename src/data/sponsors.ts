@@ -37,6 +37,7 @@ export const sponsors: Sponsor[] = [
   { name: "America Languages", tier: "prata", logo: "/sponsors/america-languages.png", url: "https://www.instagram.com/americalanguagesmanaus" },
   { name: "Lojas Famy", tier: "prata", logo: "/sponsors/lojas-famy.png", url: "https://www.instagram.com/lojasfamyoficial" },
   { name: "Instituto Sonhar", tier: "prata", logo: "/sponsors/instituto-sonhar.png", url: "https://www.instagram.com/instituto_sonhar" },
+  { name: "BIG Representações", tier: "prata", logo: "/sponsors/big-representacoes.png", url: "https://wa.me/5592991712357" },
   { name: "Ecology Ambiental", tier: "bronze", logo: "/sponsors/ecology.png", url: "https://www.instagram.com/ecologyambiental" },
   { name: "Rootec Soluções Elétricas", tier: "bronze", logo: "/sponsors/rootec.png", url: "https://www.instagram.com/rootec.eletrica" },
   { name: "A Casa do Pensador", tier: "bronze", logo: "/sponsors/casa-do-pensador.png", url: "https://www.instagram.com/casadopensador_" },
